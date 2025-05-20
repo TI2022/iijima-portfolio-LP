@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { LucideIcon } from "lucide-react";
 
 export const skillItemSchema = z.object({
   name: z.string(),
@@ -40,4 +41,12 @@ export const contactFormSchema = z.object({
   }),
 });
 
+export const skillDataSchema = z.object({
+  name: z.string(),
+  description: z.string(),
+  icon: z.custom<LucideIcon>(),
+  technologies: z.array(z.string())
+});
+
 export type ContactFormValues = z.infer<typeof contactFormSchema>;
+export type SkillData = z.infer<typeof skillDataSchema>;

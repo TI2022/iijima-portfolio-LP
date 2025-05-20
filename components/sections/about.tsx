@@ -7,10 +7,14 @@ import { MapPin, Calendar, Mail } from "lucide-react";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/lib/contexts/language-context";
+import { translations } from "@/lib/translations";
 
 export function AboutSection() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const { language } = useLanguage();
+  const t = translations[language];
 
   return (
     <section
@@ -22,13 +26,13 @@ export function AboutSection() {
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="space-y-2">
             <Badge variant="outline" className="px-4 py-1">
-              About Me
+              {t.about.title}
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">
-              My Background
+              {t.about.subtitle}
             </h2>
             <p className="max-w-[42rem] text-muted-foreground md:text-xl/relaxed">
-              Get to know my professional journey and approach to software development
+              {t.about.description}
             </p>
           </div>
         </div>
@@ -41,7 +45,7 @@ export function AboutSection() {
         >
           <div className="space-y-6">
             <div>
-              <h3 className="text-2xl font-bold mb-4">My Story</h3>
+              <h3 className="text-2xl font-bold mb-4">{t.about.story}</h3>
               <div className="space-y-4 text-muted-foreground">
                 <p>{ABOUT_DATA.summary}</p>
                 <p>{ABOUT_DATA.background}</p>

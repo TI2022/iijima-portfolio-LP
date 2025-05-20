@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container max-w-7xl mx-auto px-4 py-12 md:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">John Doe</h3>
+            <h3 className="text-lg font-semibold">Iijima Tatsunori</h3>
             <p className="text-sm text-muted-foreground">
               Freelance software engineer specializing in modern web technologies
               and startup solutions.
@@ -59,7 +59,7 @@ export function Footer() {
         </div>
         <div className="mt-12 border-t pt-8">
           <p className="text-center text-xs text-muted-foreground">
-            © {new Date().getFullYear()} John Doe. All rights reserved.
+            © {new Date().getFullYear()} Iijima Tatsunori. All rights reserved.
           </p>
         </div>
       </div>

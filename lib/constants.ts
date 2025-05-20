@@ -1,5 +1,13 @@
 import { z } from "zod";
-import { skillSchema, projectSchema, blogPostSchema } from "./schema";
+import { skillSchema, projectSchema, blogPostSchema, skillDataSchema, SkillData } from "./schema";
+import { 
+  Code2, 
+  Database, 
+  Globe, 
+  Layers, 
+  Server, 
+  Smartphone 
+} from "lucide-react";
 
 export type Skill = z.infer<typeof skillSchema>;
 export type Project = z.infer<typeof projectSchema>;
@@ -48,7 +56,7 @@ export const SKILLS: Skill[] = [
   },
 ];
 
-export const PROJECTS: Project[] = [
+export const PROJECTS_DATA: Project[] = [
   {
     title: "HealthTrack",
     description: "A comprehensive health monitoring application with AI-powered insights.",
@@ -119,7 +127,7 @@ export const BLOG_POSTS: BlogPost[] = [
 ];
 
 export const ABOUT_DATA = {
-  name: "John Doe",
+  name: "Iijima Tatsunori",
   title: "Freelance Software Engineer",
   tagline: "Building exceptional digital experiences for startups",
   summary: "I'm a passionate software engineer with over 6 years of experience specializing in building innovative web applications for startups. My approach combines technical expertise with a deep understanding of business needs to create solutions that drive growth.",
@@ -136,3 +144,42 @@ export const SOCIAL_LINKS = {
   linkedin: "https://linkedin.com/in/johndoe",
   medium: "https://medium.com/@johndoe",
 };
+
+export const SKILLS_DATA: SkillData[] = [
+  {
+    name: "Frontend Development",
+    description: "Building responsive and interactive user interfaces",
+    icon: Code2,
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    name: "Backend Development",
+    description: "Creating robust and scalable server-side applications",
+    icon: Server,
+    technologies: ["Node.js", "Python", "PostgreSQL", "MongoDB"]
+  },
+  {
+    name: "Mobile Development",
+    description: "Developing cross-platform mobile applications",
+    icon: Smartphone,
+    technologies: ["React Native", "Flutter", "iOS", "Android"]
+  },
+  {
+    name: "Database Design",
+    description: "Designing and optimizing database structures",
+    icon: Database,
+    technologies: ["SQL", "NoSQL", "Redis", "GraphQL"]
+  },
+  {
+    name: "DevOps & Cloud",
+    description: "Managing infrastructure and deployment pipelines",
+    icon: Layers,
+    technologies: ["AWS", "Docker", "Kubernetes", "CI/CD"]
+  },
+  {
+    name: "Web Technologies",
+    description: "Working with modern web standards and APIs",
+    icon: Globe,
+    technologies: ["REST", "WebSocket", "PWA", "WebRTC"]
+  }
+];
