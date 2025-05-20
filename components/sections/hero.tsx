@@ -39,7 +39,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src="/6106991.jpg"
           alt="Background"
           layout="fill"
           objectFit="cover"
