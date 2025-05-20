@@ -37,7 +37,7 @@ export function HeroSection() {
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center z-0 opacity-5 dark:opacity-10" />
       
-      <div className="container px-4 md:px-6 z-10">
+      <div className="container max-w-7xl mx-auto px-4 md:px-6 z-10">
         <motion.div
           className="flex flex-col items-center text-center space-y-10"
           variants={container}

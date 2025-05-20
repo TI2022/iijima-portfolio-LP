@@ -4,7 +4,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 export function Footer() {
   return (
     <footer className="w-full border-t bg-background">
-      <div className="container mx-auto px-4 py-12 md:px-8">
+      <div className="container max-w-7xl mx-auto px-4 py-12 md:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">John Doe</h3>

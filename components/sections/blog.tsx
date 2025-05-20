@@ -22,7 +22,7 @@ export function BlogSection() {
       className="py-20"
       ref={ref}
     >
-      <div className="container px-4 md:px-6">
+      <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="space-y-2">
             <Badge variant="outline" className="px-4 py-1">
