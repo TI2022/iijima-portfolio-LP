@@ -27,6 +27,8 @@ export const blogPostSchema = z.object({
   date: z.string(),
   url: z.string().url(),
   platform: z.string(),
+  image: z.string(),
+  category: z.string(),
 });
 
 export const contactFormSchema = z.object({
@@ -50,3 +52,4 @@ export const skillDataSchema = z.object({
 
 export type ContactFormValues = z.infer<typeof contactFormSchema>;
 export type SkillData = z.infer<typeof skillDataSchema>;
+export type BlogPost = z.infer<typeof blogPostSchema>;
