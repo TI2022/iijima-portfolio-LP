@@ -144,6 +144,7 @@ export const ABOUT_DATA = {
   location: "Tokyo, Japan",
   availability: "Available for freelance projects",
   email: "hello@johndoe.dev",
+  phone: "+81-90-xxxx-xxxx",
 };
 
 export const SOCIAL_LINKS = {
