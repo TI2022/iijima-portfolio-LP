@@ -39,11 +39,11 @@ export function AboutSection() {
         
         <div 
           className={cn(
-            "grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 opacity-0 translate-y-8 transition-all duration-700",
+            "grid grid-cols-1 gap-8 mt-12 opacity-0 translate-y-8 transition-all duration-700 mx-auto",
             isInView && "opacity-100 translate-y-0"
           )}
         >
-          <div className="space-y-6">
+          <div className="space-y-6 mx-auto max-w-prose">
             <div>
               <h3 className="text-2xl font-bold mb-4">{t.about.story}</h3>
               <div className="space-y-4 text-muted-foreground">
@@ -67,48 +67,6 @@ export function AboutSection() {
                 <span>{ABOUT_DATA.email}</span>
               </div>
             </div>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <Card className="bg-card/50 backdrop-blur-sm border border-primary/10">
-              <CardContent className="p-6">
-                <div className="font-bold text-3xl mb-4">6+</div>
-                <div className="text-lg font-medium">Years of Experience</div>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Working with startups and enterprise clients
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-card/50 backdrop-blur-sm border border-primary/10">
-              <CardContent className="p-6">
-                <div className="font-bold text-3xl mb-4">30+</div>
-                <div className="text-lg font-medium">Projects Completed</div>
-                <p className="text-sm text-muted-foreground mt-2">
-                  From concept to successful deployment
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-card/50 backdrop-blur-sm border border-primary/10">
-              <CardContent className="p-6">
-                <div className="font-bold text-3xl mb-4">15+</div>
-                <div className="text-lg font-medium">Happy Clients</div>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Delivering results that exceed expectations
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-card/50 backdrop-blur-sm border border-primary/10">
-              <CardContent className="p-6">
-                <div className="font-bold text-3xl mb-4">8+</div>
-                <div className="text-lg font-medium">Technologies</div>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Expertise in multiple tech stacks
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>

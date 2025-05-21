@@ -8,8 +8,8 @@ export const translations = {
       contact: "お問い合わせ",
     },
     hero: {
-      title: "フリーランスソフトウェアエンジニア",
-      tagline: "スタートアップのための革新的なデジタル体験を構築",
+      title: "フリーランスフルスタックエンジニア",
+      tagline: "スタートアップの課題解決に特化したエンジニア",
       viewWork: "作品を見る",
       getInTouch: "お問い合わせ",
     },
@@ -68,8 +68,8 @@ export const translations = {
       contact: "Contact",
     },
     hero: {
-      title: "Freelance Software Engineer",
-      tagline: "Building exceptional digital experiences for startups",
+      title: "Freelance Full Stack Engineer",
+      tagline: "Engineers specializing in solving startup issues",
       viewWork: "View My Work",
       getInTouch: "Get In Touch",
     },
