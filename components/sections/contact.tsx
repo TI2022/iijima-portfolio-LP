@@ -22,12 +22,17 @@ import {
 import { Send } from "lucide-react";
 import { useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { useLanguage } from "@/lib/contexts/language-context";
+import { translations } from "@/lib/translations";
 
 export function ContactSection() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const { language } = useLanguage();
+  const t = translations[language];
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -73,101 +78,96 @@ export function ContactSection() {
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="space-y-2">
             <Badge variant="outline" className="px-4 py-1">
-              Contact
+              {t.contact.title}
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">
-              Get In Touch
+              {t.contact.subtitle}
             </h2>
             <p className="max-w-[42rem] text-muted-foreground md:text-xl/relaxed">
-              Have a project in mind? Let's discuss how I can help bring your ideas to life
+              {t.contact.description}
             </p>
           </div>
         </div>
 
         <div 
           className={cn(
-            "max-w-2xl mx-auto mt-12 opacity-0 translate-y-8 transition-all duration-700",
+            "grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 opacity-0 translate-y-8 transition-all duration-700",
             isInView && "opacity-100 translate-y-0"
           )}
         >
-          <Card className="bg-card/50 backdrop-blur-sm border border-primary/10">
-            <CardContent className="p-6">
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Name</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Your name" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Your email" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+          <div className="space-y-6">
+            <Card className="bg-card/50 backdrop-blur-sm border border-primary/10">
+              <CardContent className="p-6">
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-medium">
+                        {t.contact.name}
+                      </label>
+                      <Input id="name" required {...form.register("name")} />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-medium">
+                        {t.contact.email}
+                      </label>
+                      <Input id="email" type="email" required {...form.register("email")} />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="message" className="text-sm font-medium">
+                        {t.contact.message}
+                      </label>
+                      <Textarea id="message" required {...form.register("message")} />
+                    </div>
+                    <Button type="submit" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? t.contact.sending : t.contact.send}
+                    </Button>
+                  </form>
+                </Form>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="space-y-6">
+            <Card className="bg-card/50 backdrop-blur-sm border border-primary/10">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <Mail className="h-5 w-5 text-primary mt-1" />
+                    <div>
+                      <h3 className="font-semibold">Email</h3>
+                      <p className="text-muted-foreground">{ABOUT_DATA.email}</p>
+                    </div>
                   </div>
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Message</FormLabel>
-                        <FormControl>
-                          <Textarea 
-                            placeholder="Tell me about your project..." 
-                            className="min-h-32 resize-none"
-                            {...field} 
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <Button type="submit" className="w-full" disabled={isSubmitting}>
-                    {isSubmitting ? (
-                      <span className="flex items-center">
-                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        Sending...
-                      </span>
-                    ) : (
-                      <span className="flex items-center">
-                        Send Message
-                        <Send className="ml-2 h-4 w-4" />
-                      </span>
-                    )}
-                  </Button>
-                  <p className="text-center text-sm text-muted-foreground mt-4">
-                    Or drop me an email at{" "}
-                    <a
-                      href={`mailto:${ABOUT_DATA.email}`}
-                      className="font-medium underline underline-offset-4 hover:text-primary"
-                    >
-                      {ABOUT_DATA.email}
-                    </a>
+                  <div className="flex items-start space-x-4">
+                    <Phone className="h-5 w-5 text-primary mt-1" />
+                    <div>
+                      <h3 className="font-semibold">Phone</h3>
+                      <p className="text-muted-foreground">{ABOUT_DATA.phone}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <MapPin className="h-5 w-5 text-primary mt-1" />
+                    <div>
+                      <h3 className="font-semibold">Location</h3>
+                      <p className="text-muted-foreground">{ABOUT_DATA.location}</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/50 backdrop-blur-sm border border-primary/10">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  <h3 className="font-semibold">Availability</h3>
+                  <p className="text-muted-foreground">{ABOUT_DATA.availability}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {t.contact.orEmail} <a href={`mailto:${ABOUT_DATA.email}`} className="text-primary hover:underline">{ABOUT_DATA.email}</a>
                   </p>
-                </form>
-              </Form>
-            </CardContent>
-          </Card>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>

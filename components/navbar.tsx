@@ -5,7 +5,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
+import { useLanguage } from "@/lib/contexts/language-context";
+import { translations } from "@/lib/translations";
 
 const navItems = [
   { name: "About", href: "#about" },
@@ -18,6 +20,8 @@ const navItems = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+  const t = translations[language];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,23 +49,50 @@ export function Navbar() {
           href="/"
           className="flex items-center space-x-2 font-bold tracking-tight"
         >
-          <span className="text-xl">JD</span>
+          <span className="text-xl">Iijima Tatsunori</span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-medium transition-colors hover:text-primary"
-            >
-              {item.name}
-            </Link>
-          ))}
+          <Link
+            href="#about"
+            className="text-sm font-medium hover:text-primary"
+          >
+            {t.nav.about}
+          </Link>
+          <Link
+            href="#skills"
+            className="text-sm font-medium hover:text-primary"
+          >
+            {t.nav.skills}
+          </Link>
+          <Link
+            href="#projects"
+            className="text-sm font-medium hover:text-primary"
+          >
+            {t.nav.projects}
+          </Link>
+          <Link
+            href="#blog"
+            className="text-sm font-medium hover:text-primary"
+          >
+            {t.nav.blog}
+          </Link>
+          <Link
+            href="#contact"
+            className="text-sm font-medium hover:text-primary"
+          >
+            {t.nav.contact}
+          </Link>
           <ThemeToggle />
-          <Button asChild size="sm">
-            <Link href="#contact">Hire Me</Link>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleLanguage}
+            className="ml-2"
+          >
+            <Globe className="h-5 w-5" />
+            <span className="sr-only">Toggle language</span>
           </Button>
         </nav>
 
@@ -82,20 +113,52 @@ export function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 bg-background border-b z-50 animate-in slide-in-from-top">
           <nav className="container mx-auto py-4 px-8 flex flex-col space-y-4">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium py-2 transition-colors hover:text-primary"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Button asChild size="sm" className="w-full">
-              <Link href="#contact" onClick={() => setIsMenuOpen(false)}>
-                Hire Me
-              </Link>
+            <Link
+              href="#about"
+              className="text-sm font-medium hover:text-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t.nav.about}
+            </Link>
+            <Link
+              href="#skills"
+              className="text-sm font-medium hover:text-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t.nav.skills}
+            </Link>
+            <Link
+              href="#projects"
+              className="text-sm font-medium hover:text-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t.nav.projects}
+            </Link>
+            <Link
+              href="#blog"
+              className="text-sm font-medium hover:text-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t.nav.blog}
+            </Link>
+            <Link
+              href="#contact"
+              className="text-sm font-medium hover:text-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t.nav.contact}
+            </Link>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                toggleLanguage();
+                setIsMenuOpen(false);
+              }}
+              className="justify-start"
+            >
+              <Globe className="h-4 w-4 mr-2" />
+              {language === "ja" ? "English" : "日本語"}
             </Button>
           </nav>
         </div>
