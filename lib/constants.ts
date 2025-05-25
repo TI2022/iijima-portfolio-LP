@@ -148,10 +148,10 @@ export const ABOUT_DATA = {
 };
 
 export const SOCIAL_LINKS = {
-  github: "https://github.com/johndoe",
-  twitter: "https://twitter.com/johndoe",
-  linkedin: "https://linkedin.com/in/johndoe",
-  medium: "https://medium.com/@johndoe",
+  github: "https://github.com/TI2022",
+  twitter: "https://x.com/tadanofurien?s=21&t=jhBqRne1ERNGuzDFQflNiw",
+  linkedin: "https://www.linkedin.com/in/%E8%BE%B0%E5%89%87-%E9%A3%AF%E5%B3%B6-88953a34a/",
+  medium: "",
 };
 
 export const SKILLS_DATA: SkillData[] = [
