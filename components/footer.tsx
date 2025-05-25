@@ -19,21 +19,7 @@ export function Footer() {
             </p>
           </div>
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">{t.footer.links}</h3>
-            <nav className="flex flex-col space-y-2">
-              <Link href="#about" className="text-sm text-muted-foreground hover:text-foreground">
-                {t.nav.about}
-              </Link>
-              <Link href="#skills" className="text-sm text-muted-foreground hover:text-foreground">
-                {t.nav.skills}
-              </Link>
-              <Link href="#projects" className="text-sm text-muted-foreground hover:text-foreground">
-                {t.nav.projects}
-              </Link>
-              <Link href="#blog" className="text-sm text-muted-foreground hover:text-foreground">
-                {t.nav.blog}
-              </Link>
-            </nav>
+            
           </div>
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">{t.footer.contact}</h3>

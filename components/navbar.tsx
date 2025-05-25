@@ -60,12 +60,12 @@ export function Navbar() {
           >
             {t.nav.about}
           </Link>
-          <Link
+          {/* <Link
             href="#skills"
             className="text-sm font-medium hover:text-primary"
           >
             {t.nav.skills}
-          </Link>
+          </Link> */}
           {/* <Link
             href="#projects"
             className="text-sm font-medium hover:text-primary"
