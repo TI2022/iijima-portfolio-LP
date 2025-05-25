@@ -155,18 +155,6 @@ export function ContactSection() {
                 </div>
               </CardContent>
             </Card>
-
-            <Card className="bg-card/50 backdrop-blur-sm border border-primary/10">
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  <h3 className="font-semibold">Availability</h3>
-                  <p className="text-muted-foreground">{ABOUT_DATA.availability}</p>
-                  <p className="text-sm text-muted-foreground">
-                    {t.contact.orEmail} <a href={`mailto:${ABOUT_DATA.email}`} className="text-primary hover:underline">{ABOUT_DATA.email}</a>
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>

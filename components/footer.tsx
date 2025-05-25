@@ -33,10 +33,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Contact</h3>
             <p className="text-sm text-muted-foreground">
-              hello@johndoe.dev
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Available for freelance work and consulting
+              motorsports46animals@gmail.com
             </p>
           </div>
           <div className="space-y-4">

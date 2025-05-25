@@ -142,9 +142,8 @@ export const ABOUT_DATA = {
   background: "After graduating with a Computer Science degree, I worked at several tech startups before transitioning to freelance work. This journey has equipped me with a diverse skill set and the ability to adapt quickly to different tech stacks and business domains.",
   philosophy: "I believe in writing clean, maintainable code and focusing on user experience. My goal is to help startups bring their vision to life through technology that's both powerful and easy to use.",
   location: "Tokyo, Japan",
-  availability: "Available for freelance projects",
-  email: "hello@johndoe.dev",
-  phone: "+81-90-xxxx-xxxx",
+  email: "motorsports46animals@gmail.com",
+  phone: "080-6585-1061",
 };
 
 export const SOCIAL_LINKS = {

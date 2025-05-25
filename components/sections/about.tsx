@@ -129,9 +129,9 @@ export function AboutSection() {
             <motion.div variants={itemVariants}>
               <h3 className="text-3xl font-bold text-foreground mb-6">{t.about.story}</h3>
               <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
-                <p>{ABOUT_DATA.summary}</p>
-                <p>{ABOUT_DATA.background}</p>
-                <p>{ABOUT_DATA.philosophy}</p>
+                <p>{t.about.summary}</p>
+                <p>{t.about.background}</p>
+                <p>{t.about.philosophy}</p>
               </div>
             </motion.div>
 
@@ -148,44 +148,6 @@ export function AboutSection() {
                   </CardContent>
                 </Card>
               ))}
-            </motion.div>
-
-            {/* Skills Overview */}
-            <motion.div variants={itemVariants}>
-              <h3 className="text-3xl font-bold text-foreground mb-6">{t.skills.title} {/* Using skills title translation */}</h3>
-              <div className="flex flex-wrap gap-3">
-                {skills.map((skill, index) => (
-                  <Badge key={index} variant="secondary" className="flex items-center space-x-2 text-base md:text-lg px-4 py-2 rounded-full shadow-md transform transition-transform duration-300 hover:scale-105"> {/* Enhanced badge style */}
-                    <skill.icon className="h-5 w-5" />
-                    <span>{skill.name}</span>
-                  </Badge>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Contact Info */}
-            <motion.div variants={itemVariants}>
-              <h3 className="text-3xl font-bold text-foreground mb-6">{t.contact.title} {/* Using contact title translation */}</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-muted-foreground text-lg">
-                <div className="flex items-center space-x-3">
-                  <MapPin className="h-6 w-6 text-primary flex-shrink-0" /> {/* Larger icon */}
-                  <span>{ABOUT_DATA.location}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Calendar className="h-6 w-6 text-primary flex-shrink-0" /> {/* Larger icon */}
-                  <span>{ABOUT_DATA.availability}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-6 w-6 text-primary flex-shrink-0" /> {/* Larger icon */}
-                  <span>{ABOUT_DATA.email}</span>
-                </div>
-                {ABOUT_DATA.phone && (
-                   <div className="flex items-center space-x-3">
-                     <Phone className="h-6 w-6 text-primary flex-shrink-0" /> {/* Larger icon */}
-                     <span>{ABOUT_DATA.phone}</span>
-                   </div>
-                )}
-              </div>
             </motion.div>
           </div>
         </motion.div>

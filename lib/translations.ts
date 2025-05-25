@@ -1,4 +1,172 @@
-export const translations = {
+type SkillTranslation = {
+  title: string;
+  description: string;
+};
+
+type SkillsTranslations = {
+  title: string;
+  frontend: SkillTranslation;
+  backend: SkillTranslation;
+  mobile: SkillTranslation;
+  database: SkillTranslation;
+  devops: SkillTranslation;
+  web: SkillTranslation;
+};
+
+type Translations = {
+  ja: {
+    nav: {
+      about: string;
+      skills: string;
+      projects: string;
+      blog: string;
+      contact: string;
+    };
+    hero: {
+      title: string;
+      tagline: string;
+      viewWork: string;
+      getInTouch: string;
+    };
+    about: {
+      title: string;
+      subtitle: string;
+      description: string;
+      story: string;
+      summary: string;
+      background: string;
+      philosophy: string;
+    };
+    skills: SkillsTranslations;
+    projects: {
+      title: string;
+      subtitle: string;
+      description: string;
+      featured: string;
+      liveDemo: string;
+      sourceCode: string;
+      healthtrack: {
+        title: string;
+        description: string;
+      };
+      taskmaster: {
+        title: string;
+        description: string;
+      };
+      devconnect: {
+        title: string;
+        description: string;
+      };
+      ecotracker: {
+        title: string;
+        description: string;
+      };
+    };
+    blog: {
+      title: string;
+      subtitle: string;
+      description: string;
+      readArticle: string;
+      viewAll: string;
+    };
+    contact: {
+      title: string;
+      subtitle: string;
+      description: string;
+      name: string;
+      email: string;
+      message: string;
+      send: string;
+      sending: string;
+      orEmail: string;
+    };
+    footer: {
+      description: string;
+      links: string;
+      contact: string;
+      social: string;
+      available: string;
+      rights: string;
+    };
+  };
+  en: {
+    nav: {
+      about: string;
+      skills: string;
+      projects: string;
+      blog: string;
+      contact: string;
+    };
+    hero: {
+      title: string;
+      tagline: string;
+      viewWork: string;
+      getInTouch: string;
+    };
+    about: {
+      title: string;
+      subtitle: string;
+      description: string;
+      story: string;
+      summary: string;
+      background: string;
+      philosophy: string;
+    };
+    skills: SkillsTranslations;
+    projects: {
+      title: string;
+      subtitle: string;
+      description: string;
+      featured: string;
+      liveDemo: string;
+      sourceCode: string;
+      healthtrack: {
+        title: string;
+        description: string;
+      };
+      taskmaster: {
+        title: string;
+        description: string;
+      };
+      devconnect: {
+        title: string;
+        description: string;
+      };
+      ecotracker: {
+        title: string;
+        description: string;
+      };
+    };
+    blog: {
+      title: string;
+      subtitle: string;
+      description: string;
+      readArticle: string;
+      viewAll: string;
+    };
+    contact: {
+      title: string;
+      subtitle: string;
+      description: string;
+      name: string;
+      email: string;
+      message: string;
+      send: string;
+      sending: string;
+      orEmail: string;
+    };
+    footer: {
+      description: string;
+      links: string;
+      contact: string;
+      social: string;
+      available: string;
+      rights: string;
+    };
+  };
+};
+
+export const translations: Translations = {
   ja: {
     nav: {
       about: "自己紹介",
@@ -15,14 +183,39 @@ export const translations = {
     },
     about: {
       title: "自己紹介",
-      subtitle: "My Background",
-      description: "私の専門的な経歴とソフトウェア開発へのアプローチについて知る",
-      story: "My Story",
+      subtitle: "私について",
+      description: "6年以上の経験を持つソフトウェアエンジニアとして、スタートアップ向けの革新的なWebアプリケーションの開発を専門としています。",
+      story: "経歴",
+      summary: "私は6年以上の経験を持つ情熱的なソフトウェアエンジニアです。スタートアップ向けの革新的なWebアプリケーションの開発を専門としており、技術的な専門知識とビジネスニーズの深い理解を組み合わせて、成長を促進するソリューションを作成しています。",
+      background: "コンピュータサイエンスの学位を取得後、いくつかのテックスタートアップで働き、その後フリーランスに転向しました。この経験を通じて、多様なスキルセットと異なる技術スタックやビジネスドメインに素早く適応する能力を身につけました。",
+      philosophy: "クリーンで保守性の高いコードを書き、ユーザー体験に焦点を当てることを信条としています。私の目標は、パワフルで使いやすい技術を通じて、スタートアップのビジョンを実現することです。",
     },
     skills: {
       title: "スキル",
-      subtitle: "My Skills",
-      description: "技術的な専門知識と熟練度の包括的な概要",
+      frontend: {
+        title: "フロントエンド開発",
+        description: "レスポンシブでインタラクティブなユーザーインターフェースの構築",
+      },
+      backend: {
+        title: "バックエンド開発",
+        description: "堅牢でスケーラブルなサーバーサイドアプリケーションの作成",
+      },
+      mobile: {
+        title: "モバイル開発",
+        description: "クロスプラットフォームモバイルアプリケーションの開発",
+      },
+      database: {
+        title: "データベース設計",
+        description: "データベース構造の設計と最適化",
+      },
+      devops: {
+        title: "DevOps & クラウド",
+        description: "インフラストラクチャとデプロイメントパイプラインの管理",
+      },
+      web: {
+        title: "Web技術",
+        description: "最新のWeb標準とAPIの活用",
+      },
     },
     projects: {
       title: "プロジェクト",
@@ -31,6 +224,22 @@ export const translations = {
       featured: "注目",
       liveDemo: "デモを見る",
       sourceCode: "ソースコード",
+      healthtrack: {
+        title: "HealthTrack",
+        description: "AIを活用した包括的な健康モニタリングアプリケーション",
+      },
+      taskmaster: {
+        title: "TaskMaster",
+        description: "リアルタイムコラボレーション機能を備えたチーム向け生産性ツール",
+      },
+      devconnect: {
+        title: "DevConnect",
+        description: "開発者がプロジェクトを共有し、コラボレーションできるソーシャルネットワークプラットフォーム",
+      },
+      ecotracker: {
+        title: "EcoTracker",
+        description: "パーソナライズされた推奨事項でカーボンフットプリントを追跡・削減するアプリケーション",
+      },
     },
     blog: {
       title: "ブログ",
@@ -74,15 +283,40 @@ export const translations = {
       getInTouch: "Get In Touch",
     },
     about: {
-      title: "About Me",
-      subtitle: "My Background",
-      description: "Get to know my professional journey and approach to software development",
-      story: "My Story",
+      title: "About",
+      subtitle: "About Me",
+      description: "A software engineer with over 6 years of experience specializing in building innovative web applications for startups.",
+      story: "Story",
+      summary: "I'm a passionate software engineer with over 6 years of experience specializing in building innovative web applications for startups. My approach combines technical expertise with a deep understanding of business needs to create solutions that drive growth.",
+      background: "After graduating with a Computer Science degree, I worked at several tech startups before transitioning to freelance work. This journey has equipped me with a diverse skill set and the ability to adapt quickly to different tech stacks and business domains.",
+      philosophy: "I believe in writing clean, maintainable code and focusing on user experience. My goal is to help startups bring their vision to life through technology that's both powerful and easy to use.",
     },
     skills: {
       title: "Skills",
-      subtitle: "My Skills",
-      description: "A comprehensive view of my technical expertise and proficiency",
+      frontend: {
+        title: "Frontend Development",
+        description: "Building responsive and interactive user interfaces",
+      },
+      backend: {
+        title: "Backend Development",
+        description: "Creating robust and scalable server-side applications",
+      },
+      mobile: {
+        title: "Mobile Development",
+        description: "Developing cross-platform mobile applications",
+      },
+      database: {
+        title: "Database Design",
+        description: "Designing and optimizing database structures",
+      },
+      devops: {
+        title: "DevOps & Cloud",
+        description: "Managing infrastructure and deployment pipelines",
+      },
+      web: {
+        title: "Web Technologies",
+        description: "Working with modern web standards and APIs",
+      },
     },
     projects: {
       title: "Projects",
@@ -91,6 +325,22 @@ export const translations = {
       featured: "Featured",
       liveDemo: "Live Demo",
       sourceCode: "Source Code",
+      healthtrack: {
+        title: "HealthTrack",
+        description: "A comprehensive health monitoring application with AI-powered insights",
+      },
+      taskmaster: {
+        title: "TaskMaster",
+        description: "A productivity tool for teams with real-time collaboration features",
+      },
+      devconnect: {
+        title: "DevConnect",
+        description: "A social network platform for developers to share projects and collaborate",
+      },
+      ecotracker: {
+        title: "EcoTracker",
+        description: "An application to track and reduce carbon footprint with personalized recommendations",
+      },
     },
     blog: {
       title: "Blog",
