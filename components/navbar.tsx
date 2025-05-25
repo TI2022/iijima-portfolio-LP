@@ -66,7 +66,7 @@ export function Navbar() {
           >
             {t.nav.skills}
           </Link>
-          <Link
+          {/* <Link
             href="#projects"
             className="text-sm font-medium hover:text-primary"
           >
@@ -83,7 +83,7 @@ export function Navbar() {
             className="text-sm font-medium hover:text-primary"
           >
             {t.nav.contact}
-          </Link>
+          </Link> */}
           <ThemeToggle />
           <Button
             variant="ghost"

@@ -135,23 +135,22 @@ export const BLOG_POSTS: BlogPost[] = [
 ];
 
 export const ABOUT_DATA = {
-  name: "Iijima Tatsunori",
-  title: "Freelance Software Engineer",
+  name: "飯島 辰則",
+  title: "フリーランスフルスタックエンジニア",
   tagline: "Building exceptional digital experiences for startups",
   summary: "I'm a passionate software engineer with over 6 years of experience specializing in building innovative web applications for startups. My approach combines technical expertise with a deep understanding of business needs to create solutions that drive growth.",
   background: "After graduating with a Computer Science degree, I worked at several tech startups before transitioning to freelance work. This journey has equipped me with a diverse skill set and the ability to adapt quickly to different tech stacks and business domains.",
   philosophy: "I believe in writing clean, maintainable code and focusing on user experience. My goal is to help startups bring their vision to life through technology that's both powerful and easy to use.",
   location: "Tokyo, Japan",
-  availability: "Available for freelance projects",
-  email: "hello@johndoe.dev",
-  phone: "+81-90-xxxx-xxxx",
+  email: "motorsports46animals@gmail.com",
+  phone: "080-6585-1061",
 };
 
 export const SOCIAL_LINKS = {
-  github: "https://github.com/johndoe",
-  twitter: "https://twitter.com/johndoe",
-  linkedin: "https://linkedin.com/in/johndoe",
-  medium: "https://medium.com/@johndoe",
+  github: "https://github.com/TI2022",
+  twitter: "https://x.com/tadanofurien?s=21&t=jhBqRne1ERNGuzDFQflNiw",
+  linkedin: "https://www.linkedin.com/in/%E8%BE%B0%E5%89%87-%E9%A3%AF%E5%B3%B6-88953a34a/",
+  medium: "",
 };
 
 export const SKILLS_DATA: SkillData[] = [
