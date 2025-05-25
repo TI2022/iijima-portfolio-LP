@@ -67,13 +67,13 @@ export function HeroSection() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
               {ABOUT_DATA.name}
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground">
+            <p className="text-lg md:text-lg text-muted-foreground">
               {t.hero.title}
             </p>
           </motion.div>
 
           <motion.p
-            className="max-w-[42rem] text-lg md:text-xl text-muted-foreground leading-normal"
+            className="max-w-[42rem] text-xl md:text-2xl text-muted-foreground leading-normal"
             variants={item}
           >
             {t.hero.tagline}
@@ -83,12 +83,12 @@ export function HeroSection() {
             className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4"
             variants={item}
           >
-            <Button asChild size="lg">
-              <Link href="#projects">{t.hero.viewWork}</Link>
+            {/* <Button asChild size="lg">
+              <Link href="#about">{t.hero.viewWork}</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="#contact">{t.hero.getInTouch}</Link>
-            </Button>
+              <Link href="#skills">{t.hero.getInTouch}</Link>
+            </Button> */}
           </motion.div>
 
           <motion.div

@@ -1,7 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import { useLanguage } from "@/lib/contexts/language-context";
+import { translations } from "@/lib/translations";
 
 export function Footer() {
+  const { language } = useLanguage();
+  const t = translations[language];
   return (
     <footer className="w-full border-t bg-background">
       <div className="container max-w-7xl mx-auto px-4 py-12 md:px-8">
@@ -9,35 +15,34 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Iijima Tatsunori</h3>
             <p className="text-sm text-muted-foreground">
-              Freelance software engineer specializing in modern web technologies
-              and startup solutions.
+              {t.footer.description}
             </p>
           </div>
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Links</h3>
+            <h3 className="text-lg font-semibold">{t.footer.links}</h3>
             <nav className="flex flex-col space-y-2">
               <Link href="#about" className="text-sm text-muted-foreground hover:text-foreground">
-                About
+                {t.nav.about}
               </Link>
               <Link href="#skills" className="text-sm text-muted-foreground hover:text-foreground">
-                Skills
+                {t.nav.skills}
               </Link>
               <Link href="#projects" className="text-sm text-muted-foreground hover:text-foreground">
-                Projects
+                {t.nav.projects}
               </Link>
               <Link href="#blog" className="text-sm text-muted-foreground hover:text-foreground">
-                Blog
+                {t.nav.blog}
               </Link>
             </nav>
           </div>
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Contact</h3>
+            <h3 className="text-lg font-semibold">{t.footer.contact}</h3>
             <p className="text-sm text-muted-foreground">
               motorsports46animals@gmail.com
             </p>
           </div>
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Social</h3>
+            <h3 className="text-lg font-semibold">{t.footer.social}</h3>
             <div className="flex space-x-4">
               <Link href="https://github.com/TI2022" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
                 <Github className="h-5 w-5" />
@@ -56,7 +61,7 @@ export function Footer() {
         </div>
         <div className="mt-12 border-t pt-8">
           <p className="text-center text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Iijima Tatsunori. All rights reserved.
+            © {new Date().getFullYear()} Iijima Tatsunori. {t.footer.rights}
           </p>
         </div>
       </div>

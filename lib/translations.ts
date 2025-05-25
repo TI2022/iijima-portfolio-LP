@@ -36,6 +36,10 @@ type Translations = {
       summary: string;
       background: string;
       philosophy: string;
+      idea: string;
+      summary2: string;
+      background2: string;
+      philosophy2: string;
     };
     skills: SkillsTranslations;
     projects: {
@@ -111,6 +115,10 @@ type Translations = {
       summary: string;
       background: string;
       philosophy: string;
+      idea: string;
+      summary2: string;
+      background2: string;
+      philosophy2: string;
     };
     skills: SkillsTranslations;
     projects: {
@@ -178,17 +186,21 @@ export const translations: Translations = {
     hero: {
       title: "フリーランスフルスタックエンジニア",
       tagline: "スタートアップの課題解決に特化したエンジニア",
-      viewWork: "作品を見る",
-      getInTouch: "お問い合わせ",
+      viewWork: "自己紹介",
+      getInTouch: "スキル",
     },
     about: {
       title: "自己紹介",
-      subtitle: "私について",
-      description: "6年以上の経験を持つソフトウェアエンジニアとして、スタートアップ向けの革新的なWebアプリケーションの開発を専門としています。",
+      subtitle: "",
+      description: "5年ソフトウェアの開発に携わってきました。",
       story: "経歴",
-      summary: "私は6年以上の経験を持つ情熱的なソフトウェアエンジニアです。スタートアップ向けの革新的なWebアプリケーションの開発を専門としており、技術的な専門知識とビジネスニーズの深い理解を組み合わせて、成長を促進するソリューションを作成しています。",
-      background: "コンピュータサイエンスの学位を取得後、いくつかのテックスタートアップで働き、その後フリーランスに転向しました。この経験を通じて、多様なスキルセットと異なる技術スタックやビジネスドメインに素早く適応する能力を身につけました。",
-      philosophy: "クリーンで保守性の高いコードを書き、ユーザー体験に焦点を当てることを信条としています。私の目標は、パワフルで使いやすい技術を通じて、スタートアップのビジョンを実現することです。",
+      summary: "サーバーサイドメイン経歴でありますが、フロントエンド、スマホアプリ開発経験もあります。SPA認証処理選定や SQL実行速度を考慮したフロント側開発検討など、システム全体を俯瞰して見た上でフロントエンド開発が得意です。",
+      background: "またチーム開発においてコミュニケーションコストを下げるために、打ち合わせ決定事項を一元管理するような仕組みづくりなど、開発効率を上げる試みも実施してきました。",
+      philosophy: "さらに一度現場で経験した重要度高い技術個人開発を経て次の案件で活用、提案できるように努めています。",
+      idea: "理念",
+      summary2: "課題設定と解決策の提供を通じて、スタートアップの成長を加速させることを目指しています。",
+      background2: "エンジニアという枠には囚われず、企業の利益から逆算してビジネスの課題を見つけ出し解決策の提案をします。",
+      philosophy2: "",
     },
     skills: {
       title: "スキル",
@@ -279,7 +291,7 @@ export const translations: Translations = {
     hero: {
       title: "Freelance Full Stack Engineer",
       tagline: "Engineers specializing in solving startup issues",
-      viewWork: "View My Work",
+      viewWork: "About",
       getInTouch: "Get In Touch",
     },
     about: {
@@ -290,6 +302,11 @@ export const translations: Translations = {
       summary: "I'm a passionate software engineer with over 6 years of experience specializing in building innovative web applications for startups. My approach combines technical expertise with a deep understanding of business needs to create solutions that drive growth.",
       background: "After graduating with a Computer Science degree, I worked at several tech startups before transitioning to freelance work. This journey has equipped me with a diverse skill set and the ability to adapt quickly to different tech stacks and business domains.",
       philosophy: "I believe in writing clean, maintainable code and focusing on user experience. My goal is to help startups bring their vision to life through technology that's both powerful and easy to use.",
+      idea: "理念",
+      summary2: "私は6年以上の経験を持つ情熱的なソフトウェアエンジニアです。スタートアップ向けの革新的なWebアプリケーションの開発を専門としており、技術的な専門知識とビジネスニーズの深い理解を組み合わせて、成長を促進するソリューションを作成しています。",
+      background2: "コンピュータサイエンスの学位を取得後、いくつかのテックスタートアップで働き、その後フリーランスに転向しました。この経験を通じて、多様なスキルセットと異なる技術スタックやビジネスドメインに素早く適応する能力を身につけました。",
+      philosophy2: "クリーンで保守性の高いコードを書き、ユーザー体験に焦点を当てることを信条としています。私の目標は、パワフルで使いやすい技術を通じて、スタートアップのビジョンを実現することです。",
+    
     },
     skills: {
       title: "Skills",

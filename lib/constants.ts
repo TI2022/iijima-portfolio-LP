@@ -135,8 +135,8 @@ export const BLOG_POSTS: BlogPost[] = [
 ];
 
 export const ABOUT_DATA = {
-  name: "Iijima Tatsunori",
-  title: "Freelance Software Engineer",
+  name: "飯島 辰則",
+  title: "フリーランスフルスタックエンジニア",
   tagline: "Building exceptional digital experiences for startups",
   summary: "I'm a passionate software engineer with over 6 years of experience specializing in building innovative web applications for startups. My approach combines technical expertise with a deep understanding of business needs to create solutions that drive growth.",
   background: "After graduating with a Computer Science degree, I worked at several tech startups before transitioning to freelance work. This journey has equipped me with a diverse skill set and the ability to adapt quickly to different tech stacks and business domains.",

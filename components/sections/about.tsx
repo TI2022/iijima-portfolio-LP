@@ -135,19 +135,14 @@ export function AboutSection() {
               </div>
             </motion.div>
 
-            {/* Highlight Stats */}
-            <motion.div 
-              className="grid grid-cols-2 lg:grid-cols-4 gap-6"
-              variants={itemVariants} // Apply item animation
-            >
-              {highlightStats.map((stat, index) => (
-                <Card key={index} className="bg-card/60 backdrop-blur-md border border-primary/20 text-center shadow-xl transform transition-transform duration-300 hover:-translate-y-2"> {/* Card with shadow and hover effect */}
-                  <CardContent className="p-6">
-                    <div className="font-bold text-3xl md:text-4xl text-primary mb-2">{stat.value}</div>
-                    <div className="text-base md:text-lg text-muted-foreground">{stat.label}</div>
-                  </CardContent>
-                </Card>
-              ))}
+            {/* Idea */}
+            <motion.div variants={itemVariants}>
+              <h3 className="text-3xl font-bold text-foreground mb-6">{t.about.idea}</h3>
+              <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+                <p>{t.about.summary2}</p>
+                <p>{t.about.background2}</p>
+                <p>{t.about.philosophy2}</p>
+              </div>
             </motion.div>
           </div>
         </motion.div>
